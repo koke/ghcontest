@@ -20,7 +20,7 @@ tests.each do |uid|
 
   usermap[uid].each do |compid|
     next if compid == uid
-    ratio = 1 + (users[uid].size - users[compid].size).abs / (users[uid].size + users[compid].size)
+    ratio = 1 + (users[uid].size - users[compid].size).abs
     users[compid].each do |repoid|
       common[repoid] ||= 0
       common[repoid] += 1.0 / ratio
